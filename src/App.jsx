@@ -5,20 +5,21 @@ import About from './Pages/About'
 import Layout from './Pages/Layout'
 import Dashboard from './Pages/Dashboard'
 import Settings from './Pages/Settings'
+import NotFound from './Pages/NotFound'
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/', element: <Layout />,
+      path: '/', element: <Home />,
       children: [
-        { index: 'true', element: <Home /> },
+        {index:true,},
         { path: '/Dashboard', element: <Dashboard /> },
         {path:'/settings',element:<Settings/>},
         {path:'/about',element:<About/>},
         
       ]
     },
-    { path: '/about', element: <About /> },
-    
+ 
+    {path:'*', element:<NotFound/>}
  ])
   return (
     <>
