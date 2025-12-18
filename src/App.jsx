@@ -5,6 +5,7 @@ import About from './Pages/About'
 import Dashboard from './Pages/Dashboard'
 import Settings from './Pages/Settings'
 import Navbar from './Pages/Navbar'
+import NotFound from './Pages/NotFound'
 
 function App() {
   const router = createBrowserRouter([
@@ -25,6 +26,10 @@ function App() {
     {
       path: '/settings',
       element:<Settings/>
+        },
+    {
+      path: '*',
+      element:<NotFound/>
     }
       ]
     },
