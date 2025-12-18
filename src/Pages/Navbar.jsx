@@ -1,14 +1,18 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 
 const Navbar = () => {
+    const navLinkstyle = ({ isActive }) => ({
+        color: isActive ? 'orange' : 'white',
+        
+    })
   return (
       <>
         <nav>
-            <Link to='/'>Home</Link>|
-            <Link to='/about'>About</Link>|
-            <Link to="/dashboard">Dashboard</Link>|
-            <Link to="/settings">Settings</Link>
+            <NavLink to='/' style={navLinkstyle}>Home</NavLink>|
+            <NavLink to='/about' style={navLinkstyle}>About</NavLink>|
+            <NavLink to="/dashboard" style={navLinkstyle}>Dashboard</NavLink>|
+            <NavLink to="/settings" style={navLinkstyle}>Settings</NavLink>
           </nav>
           <main>
               <Outlet/>
