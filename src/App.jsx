@@ -64,9 +64,7 @@ function App() {
     },
   ])
 
-  //*create a new router to pratice and do exercises of react router dom
-  //*Exercise-2-Build a Product and ProductDetails pages 
-  return (
+return (
     <>
       <h1 style={{ textAlign: 'center' }}>React Router Dom Exercises & Mini Project</h1>
       <RouterProvider router={router}></RouterProvider>
