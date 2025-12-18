@@ -51,6 +51,7 @@ function App() {
   //  ])
   
   // *Create a new router to pratice and do exercises of react router dom
+  //*Exercise-1-build a multi page portfolio website with three pages Home, About, Contact using react router dom
   const router = createBrowserRouter([
     {
       path: '/',
@@ -62,6 +63,9 @@ function App() {
       ]
     },
   ])
+
+  //*create a new router to pratice and do exercises of react router dom
+  //*Exercise-2-Build a Product and ProductDetails pages 
   return (
     <>
       <h1 style={{ textAlign: 'center' }}>React Router Dom Exercises & Mini Project</h1>
