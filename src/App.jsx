@@ -1,5 +1,9 @@
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import './App.css'
+import Navigation from './Components/MutliPagePortfolio/Navigation'
+import HomePage from './Components/MutliPagePortfolio/HomePage'
+import AboutPage from './Components/MutliPagePortfolio/AboutPage'
+import ContactPage from './Components/MutliPagePortfolio/ContactPage'
 // import Home from './Pages/Home'
 // import About from './Pages/About'
 // import Dashboard from './Pages/Dashboard'
@@ -44,7 +48,20 @@ function App() {
 //       ]
 //     },
    
-//  ])
+  //  ])
+  
+  // *Create a new router to pratice and do exercises of react router dom
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Navigation />,
+      children: [
+        {index:true,element:<HomePage/>},
+        {path:"/AboutPage",element:<AboutPage/>},
+        {path:"/ContactPage",element:<ContactPage/>},
+      ]
+    },
+  ])
   return (
     <>
       <h1 style={{ textAlign: 'center' }}>React Router Dom Exercises & Mini Project</h1>
